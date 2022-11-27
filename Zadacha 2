@@ -9,7 +9,7 @@ using namespace std;
 void simpleSort(int* m, int n) {
     int j, r;
     for (int i = 1; i < n; i++) {
-        if (m[i] > 0) {
+        if (m[i] >= 0) {
             r = m[i];
             j = i - 1;
             while (j >= 0 && m[j] > r) {
@@ -46,7 +46,7 @@ int main()
     int* m2;
     m2 = new int[size2];
     for (int i = 0; i < n; i++) {
-        if (m[i] > 0) {
+        if (m[i] >= 0) {
             m1[s1] = m[i];
             s1++;
         }
@@ -60,7 +60,7 @@ int main()
     simpleSort(m2, size2);
     s1 = 0, s2 = 0;
     for (int i = 0; i < n; i++) {
-        if (m[i] > 0) {
+        if (m[i] >= 0) {
             m[i] = m1[s1];
             s1++;
         }
